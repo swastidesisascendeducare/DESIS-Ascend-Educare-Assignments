@@ -106,3 +106,9 @@ int main() {
 
 ### Output for above example usage:
 ![Output of Above Code](image.png)
+
+---
+
+### Author: Swasti Mishra (swastidesisascendeducare)
+
+2nd year undergrad at IIT(ISM) Dhanbad.
