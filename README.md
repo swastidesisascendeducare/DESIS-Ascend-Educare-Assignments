@@ -102,3 +102,7 @@ int main() {
     }
     return 0;
 }
+```
+
+### Output for above example usage:
+![Output of Above Code](image.png)
