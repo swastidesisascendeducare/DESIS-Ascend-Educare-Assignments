@@ -19,3 +19,13 @@ This is a simple real-time chat server built in C++ that lets multiple users con
 ## File Structure
 - `chat_server.cpp`: The main C++ code for the server logic.
 - `chat_log.txt`: The log file where all chat interactions are stored.
+
+## Implementation Images on my computer:
+
+![alt text](image-1.png)
+![alt text](image.png)
+
+As people connect, a "-username- connected" message is prompted and the user can send the message to the required recipient. The server code checks whether the recipient has connected and sends the message accordingly. If the recipent has not connected, as shown above, the output shown is: User not found.
+
+## Author: 
+Swasti Mishra, undergrad at IIT(ISM) Dhanbad.
