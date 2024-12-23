@@ -35,7 +35,7 @@ int main() {
     struct sockaddr_in servAddr;
     char buf[BUF_SIZE];
 
-    // Create a socket
+    // Create socket
     clientSock = socket(AF_INET, SOCK_STREAM, 0);
     if (clientSock == -1) {
         perror(RED "Socket creation failed" RESET);
@@ -71,7 +71,7 @@ int main() {
         cout << YELLOW << "Recipient: " << RESET;
         cin >> recipient;
         cout << YELLOW << "Message: " << RESET;
-        cin.ignore(); // To handle leftover newline from previous input
+        cin.ignore(); 
         getline(cin, message);
 
         string fullMessage = recipient + " " + message;
