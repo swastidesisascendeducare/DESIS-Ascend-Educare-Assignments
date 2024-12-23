@@ -109,17 +109,16 @@ int main() {
     }
 
     servAddr.sin_family = AF_INET;
-    servAddr.sin_addr.s_addr = INADDR_ANY; // Bind to any available network interface
+    servAddr.sin_addr.s_addr = INADDR_ANY; 
     servAddr.sin_port = htons(PORT);
 
-    // Bind socket to the port
     if (bind(serverSock, (struct sockaddr *)&servAddr, sizeof(servAddr)) == -1) {
         perror(RED "Bind failed" RESET);
         close(serverSock);
         return 1;
     }
 
-    // Start listening for connections
+    // listening for connections
     if (listen(serverSock, 5) == -1) {
         perror(RED "Listen failed" RESET);
         close(serverSock);
@@ -128,15 +127,12 @@ int main() {
 
     cout << GREEN << "Server running on port " << PORT << RESET << endl;
 
-    // Main loop to accept clients
     while (true) {
         int clientSock = accept(serverSock, (struct sockaddr *)&clientAddr, &addrLen);
         if (clientSock == -1) {
             perror(RED "Accept failed" RESET);
             continue;
         }
-
-        // Spawn a thread for each client
         thread(handleClient, clientSock).detach();
     }
 
